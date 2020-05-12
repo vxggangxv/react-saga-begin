@@ -1,0 +1,107 @@
+@charset 'utf-8';
+
+// $vertical-scroll: 17px;
+$vertical-scroll: 20px;
+$screen-xxs-width: 320px;
+$screen-xs-width: 576px;
+$screen-sm-width: 768px;
+$screen-md-width: 992px;
+$screen-lg-pd: 20px;
+$screen-lg-width: 1450px;
+
+$hd-ht-m: 45px;
+$hd-ht-pc: 80px;
+
+$sidebar-wd: 300px;
+// $sidebar-wd: 0px;
+
+$font-stack: ('Noto Sans KR', sans-serif);
+$font-nnGothic: ('Nanum Gothic', Sans-serif);
+$font-nnSquareR: ('NanumSquareRound', Sans-serif);
+$font-ntss: ('Noto Sans KR', Sans-serif);
+$font-dt: (Dotum, Sans-serif);
+$font-opss: ('Open Sans', sans-serif);
+$font-jfss: ('Josefin Sans', sans-serif);
+
+$font-color: #333;
+$font-gray: #999;
+$font-gray2: #bbb;
+$font-gray3: #525252;
+$font-gray4: #ccc;
+
+$bor-gray: #c9c9c9;
+$bor-gray2: #bababa;
+
+// $primary-color: #003f7c;
+// $primary-color-dark: #183d62;
+// $primary-color-deepdark: #ff732e;
+// $primary-color: #7c92fa;
+// $primary-color: #bcaaa4;
+// $primary-color: #a1887f;
+$primary-color: #f2c847;
+
+// pc
+// $header-color: #bcaaa4;
+$header-color: #f2c847;
+
+// mobile
+$gnb-title-bg: #00474f;
+$gnb-body-bg: #003237;
+$gnb-menu: #008d72;
+$gnb-menu-hover: #54a73a;
+
+$fg-page-tit: #f4774d;
+
+$btn-blue: #337ab7;
+$btn-blue-dark: #2e6da4;
+$btn-green: #5cb85c;
+$btn-green-dark: #4cae4c;
+$btn-aqua: #5bc0de;
+$btn-aqua-dark: #46b8da;
+$btn-orange: #f0ad4e;
+$btn-orange-dark: #eea236;
+$btn-red: #d9534f;
+$btn-red-dark: #d43f3a;
+$btn-gray: gray;
+
+$fg-gray: #828282;
+
+$c-white: #fff;
+$c-green: #74b02f;
+$c-yellow: #fff588;
+$c-red: #d52d00;
+$c-lightbrown: #d35e00;
+$c-blue: #5961e8;
+$c-darkblue: #315b84;
+$c-purple: #7954ff;
+
+// admin variables
+$admin-body-c: #646c9a;
+$admin-body-bg: #f2f3f8;
+$admin-primary: #5d78ff;
+$admin-primary-light: #93a2dd;
+$admin-primary-light2: #f0f3ff;
+$admin-aqua: #00c5dc;
+$admin-pink: #fd397a;
+
+$admin-sb-bg: #242939;
+$admin-sb-bg-active: #1f2433;
+$admin-sb-icon: #434d6b;
+$admin-sb-icon-active: #687393;
+$admin-sb-section: #606a8c;
+$admin-sb-text: #c0c4d1;
+$admin-sb-text-active: #fff;
+$admin-sb-subtext: #989eb3;
+
+$admin-c-black: #48465b;
+$admin-c-black1: #595d6e;
+$admin-c-black3: #6c7293;
+$admin-c-black4: #74788d;
+$admin-c-black5: #959cb6;
+
+$admin-mn-icon: #b4c8ce;
+
+$admin-bor: #ebedf2;
+$admin-bor2: #d1d7e2;
+$admin-won: #bdc3d4;
+$admin-tbl-bor: #f0f3ff;
