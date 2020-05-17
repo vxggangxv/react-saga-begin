@@ -1,13 +1,20 @@
 import React from 'react';
+import styled, { css } from 'styled-components';
 
-function Counter({ number, onIncrease, onDecrease }) {
+const Container = styled.div`
+  padding: 50px;
+`;
+
+const NumberStyle = { marginBottom: '10px' };
+
+const Counter = ({ number, onIncrease, onDecrease }) => {
   return (
-    <div>
-      <h1>{number}</h1>
+    <Container>
+      <h1 style={NumberStyle}>{number}</h1>
       <button onClick={onIncrease}>+1</button>
       <button onClick={onDecrease}>-1</button>
-    </div>
+    </Container>
   );
-}
+};
 
 export default Counter;

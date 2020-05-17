@@ -11,6 +11,8 @@ const globalStyles = createGlobalStyle`
       font-family: 'Noto Sans KR', sans-serif;
       background-color: #f1f1f1;
       color: #333;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     
     .hide {

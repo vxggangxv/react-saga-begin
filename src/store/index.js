@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer, { rootSaga } from './modules';
 import logger from 'redux-logger';
+import myLogger from '../middlewares/myLogger';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import ReduxThunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
@@ -14,6 +15,7 @@ const store = createStore(
     applyMiddleware(
       ReduxThunk,
       sagaMiddleware, // 사가 미들웨어를 적용하고
+      // myLogger,
       logger,
     ),
   ),

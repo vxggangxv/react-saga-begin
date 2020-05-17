@@ -11,10 +11,11 @@ export default () => (
   <>
     <Suspense fallback={<Spinner />}>
       <Switch>
-        <Redirect path="/" exact to="/counter" />
+        <Redirect path="/" exact to="/posts" />
         {/* <Redirect path="/" exact to="/posts" />
         <Route path="/posts" exact component={PostListPage} />
         <Route path="/posts/:id" component={PostPage} /> */}
+        <Route path="/posts" component={PostListPage} />
         <Route path="/counter" component={CounterPage} />
         <Redirect from="*" to="/" />
       </Switch>

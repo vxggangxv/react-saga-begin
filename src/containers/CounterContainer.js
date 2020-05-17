@@ -3,7 +3,8 @@ import Counter from '../components/Counter';
 import { useSelector, useDispatch } from 'react-redux';
 import { increaseAsync, decreaseAsync } from '../store/modules/counter';
 
-function CounterContainer() {
+// function CounterContainer() {
+const CounterContainer = () => {
   const number = useSelector((state) => state.counter);
   const dispatch = useDispatch();
 
@@ -17,6 +18,6 @@ function CounterContainer() {
   return (
     <Counter number={number} onIncrease={onIncrease} onDecrease={onDecrease} />
   );
-}
+};
 
 export default CounterContainer;
