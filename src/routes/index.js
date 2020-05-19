@@ -9,7 +9,7 @@ const CounterPage = lazy(() => import('../pages/CounterPage'));
 
 export default () => (
   <>
-    <Suspense fallback={<Spinner />}>
+    <Suspense fallback={<div></div>}>
       <Switch>
         <Redirect path="/" exact to="/posts" />
         {/* <Redirect path="/" exact to="/posts" />

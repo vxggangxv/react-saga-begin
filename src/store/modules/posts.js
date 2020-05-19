@@ -1,51 +1,46 @@
-import * as postsAPI from '../../api/posts';
+import * as api from '../../api/posts';
 import { takeEvery, call, put } from 'redux-saga/effects';
 import { createAction, createReducer } from '@reduxjs/toolkit';
+import { CLEAR_API_CALLING_STATUS } from './app';
 
-export const SET_IF_FETCHING = createAction('posts/SET_IF_FETCHING');
-export const SET_POSTS = createAction('posts/SET_POSTS');
-export const REQUEST_POSTS = createAction('posts/REQUEST_POSTS');
-export const RECEIVE_POSTS = createAction('posts/RECEIVE_POSTS');
-export const FETCH_POSTS = createAction('posts/FETCH_POSTS');
+export const FETCH_POSTS_REQUEST = createAction('posts/FETCH_POSTS_REQUEST');
+export const FETCH_POSTS_SUCCESS = createAction('posts/FETCH_POSTS_SUCCESS');
+export const FETCH_POSTS_FAILURE = createAction('posts/FETCH_POSTS_FAILURE');
+// export const SET_IF_FETCHING = createAction('posts/SET_IF_FETCHING');
+// export const SET_POSTS = createAction('posts/SET_POSTS');
 // const GET_POST = createAction('GET_POST');
 // const GET_POST_SUCCESS = createAction('GET_POST_SUCCESS');
 // const GET_POST_ERROR = createAction('GET_POST_ERROR');
 
 const initialState = {
-  isFetching: false,
+  apiCalling: false,
+  toasts: [],
   posts: [],
   // isLoding: false,
   // post: {},
 };
 
 const postsReducer = createReducer(initialState, {
-  [SET_POSTS]: (state, action) => {
-    // console.log(action.payload);
-    const posts = action.payload;
-    state.posts.push(posts);
-  },
-  [SET_IF_FETCHING]: (state, action) => {
-    // console.log(action.payload);
-    // state.isFetching = false;
-    // const posts = action.payload;
-    // state.push(posts);
-    state.isFetching = action.payload;
+  [FETCH_POSTS_SUCCESS]: (state, action) => {
+    state.posts = action.payload;
   },
 });
 
-function* fetchPostsSaga() {
-  // console.log('fetchPostsSaga');
-  // console.log(SET_IF_FETCHING);
-  yield put({ type: SET_IF_FETCHING, payload: false });
-  const posts = yield call(postsAPI.fetchPosts);
-  yield put({ type: SET_POSTS, payload: posts });
-  yield put({ type: SET_IF_FETCHING, payload: true });
-  // // console.log(posts);
-}
-
-// 사가들을 합치기
 export function* postsSaga() {
-  yield takeEvery(FETCH_POSTS, fetchPostsSaga);
+  yield takeEvery(FETCH_POSTS_REQUEST, fetchPostsSaga);
 }
 
+function* fetchPostsSaga() {
+  try {
+    const posts = yield call(api.fetchPosts);
+    yield put({ type: FETCH_POSTS_SUCCESS, payload: posts });
+  } catch (err) {
+    yield put({
+      type: FETCH_POSTS_FAILURE,
+      payload: '데이터를 불러오기에 실패했습니다.',
+    });
+  } finally {
+    yield put({ type: CLEAR_API_CALLING_STATUS });
+  }
+}
 export default postsReducer;

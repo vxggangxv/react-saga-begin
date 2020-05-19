@@ -23,7 +23,7 @@ const posts = [
 
 // 포스트 목록을 가져오는 비동기 함수
 export const fetchPosts = async () => {
-  // await sleep(500); // 0.5초 쉬고
+  await sleep(500); // 0.5초 쉬고
   return posts; // posts 배열
 };
 
