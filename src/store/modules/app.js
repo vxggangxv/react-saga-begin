@@ -46,11 +46,7 @@ export function* appSaga() {
 }
 
 function* handleRequest(action) {
-  // console.log('handleRequest');
   yield put({ type: SET_API_CALLING_STATUS });
-  // const { payload } = action;
-  // if (isString(payload)) {
-  // }
 }
 
 // function* handleFailure(action) {
