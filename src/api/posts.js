@@ -35,7 +35,7 @@ export const fetchPostById = async (id) => {
 
 // import axios from 'axios';
 
-// fetchPosts, fetchPostById, createNewPost, editPostById, deletePostById
+// fetchPosts, fetchPostById, createPost, editPostById, deletePostById
 
 // export const fetchPosts = async () => {
 //   const response = await axios.get('/posts');
