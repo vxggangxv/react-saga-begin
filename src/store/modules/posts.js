@@ -19,6 +19,9 @@ const postsReducer = createReducer(initialState, {
   [FETCH_POSTS_SUCCESS]: (state, action) => {
     state.posts = action.payload;
   },
+  [FETCH_POST_SUCCESS]: (state, action) => {
+    state.post = action.payload;
+  },
 });
 
 export function* postsSaga() {
@@ -40,10 +43,12 @@ function* fetchPostsSaga() {
   }
 }
 
-function* fetchPostSaga() {
+function* fetchPostSaga(action) {
+  const { payload } = action;
+  if (!payload) return;
   try {
-    const posts = yield call(api.fetchPostById);
-    yield put({ type: FETCH_POST_SUCCESS, payload: posts });
+    const post = yield call(api.fetchPostById, payload);
+    yield put({ type: FETCH_POST_SUCCESS, payload: post });
   } catch (err) {
     yield put({
       type: FETCH_POST_FAILURE,

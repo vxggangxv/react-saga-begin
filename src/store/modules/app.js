@@ -1,4 +1,4 @@
-import { takeEvery, call, put } from 'redux-saga/effects';
+import { takeEvery, put } from 'redux-saga/effects';
 import { createAction, createReducer } from '@reduxjs/toolkit';
 import { isString } from 'util';
 

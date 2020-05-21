@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function PostList({ posts }) {
   return (
     <ul>
       {posts.map((item, i) => (
-        <li key={i}>{item.title}</li>
+        <li key={item.id}>
+          <Link to={`/posts/${item.id}`}>{item.title}</Link>
+        </li>
       ))}
     </ul>
   );
