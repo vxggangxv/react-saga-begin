@@ -6,7 +6,7 @@
 - Redux-saga
 - Redux-toolkit
 - Axios
-- ljklkjlkj
+- test
 
 ## 개발 환경
 
