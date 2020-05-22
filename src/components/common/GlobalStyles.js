@@ -5,9 +5,6 @@ const globalStyles = createGlobalStyle`
     ${reset};
     
     body {
-      @import url('./assets/fonts/notosanskr/notosanskr.css');
-      @import url('./assets/fonts/mdi/css/materialdesignicons.min.css');
-      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
       font-family: 'Noto Sans KR', sans-serif;
       background-color: #f1f1f1;
       color: #333;

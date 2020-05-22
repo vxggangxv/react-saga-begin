@@ -38,7 +38,10 @@
     "predeploy": "npm run build"
   },
   "eslintConfig": {
-    "extends": "react-app",
+    "extends": [
+      "react-app",
+      "plugin:react-hooks/recommended"
+    ],
     "rules": {}
   },
   "browserslist": {
@@ -54,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.0.2",
     "gh-pages": "^2.2.0",
     "prettier": "^2.0.2"
   },
