@@ -1,8 +1,8 @@
 {
-  "name": "react-movie-saga",
+  "name": "react-saga-begin",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vxggangxv.github.io/react-movie-saga",
+  "homepage": "https://vxggangxv.github.io/react-saga-begin",
   "dependencies": {
     "@loadable/component": "^5.12.0",
     "@reduxjs/toolkit": "^1.1.0",
